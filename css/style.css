@@ -1,0 +1,329 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@200&family=Asap:ital@1&family=Dancing+Script:wght@700&family=Nunito+Sans:wght@700&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+/* font-family: 'Anybody', cursive;
+font-family: 'Asap', sans-serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Pacifico', cursive; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*VARIABLES GLOBALES*/
+
+:root{
+    --colorLogo: orange;
+    --myColor2: rgb(223, 255, 251);
+    --myFont1: 'Asap', sans-serif;
+    --myfont2: 'Black Han Sans', sans-serif;
+    --myGrad: linear-gradient(to right, rgb(41, 1, 1) , rgb(81, 1, 1), rgb(121, 1, 1),rgb(161, 1, 1));
+    --myColorContenedor: rgb(192, 67, 56);
+}
+
+/*HEADER*/
+
+.encabezado {
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:baseline;
+    align-items:flex-start;
+    align-content:space-between;
+
+    background-image: var(--myGrad);
+    border-bottom: 10px solid rgb(11, 6, 6);
+}
+
+.navbar-Personal {
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:baseline;
+    align-items:center;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: var(--myColor2) !important;   
+    font-size: 18px;
+    margin: 15px;
+}
+
+.nav-item a:hover{
+    color:rgb(235, 210, 25) !important;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.boton-buscar {
+    margin-right: 40px;
+}
+
+/*MAIN INDEX*/
+
+.titulos {    
+    background-image: url("../recursos/inicio/portadaCine.jpg");
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    justify-content:baseline;
+    align-items:center;
+    align-content:space-between;
+}
+
+.titulo-importante1 {    
+    text-align: left;
+    font-size: 80px;
+    font-family: 'Black Han Sans', sans-serif; /*'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
+    font-weight: bold;
+    color: var(--myColor2);
+    margin: 50px;
+    padding-top: 30px;
+}
+
+.titulo-importante2 {
+    text-align: left;
+    font-size: 60px;
+    font-family:'Black Han Sans', sans-serif;;   
+    text-decoration: underline; 
+    color: var(--myColor2);
+    margin: 50px;
+}
+
+.titulo-importante3 {
+    font-style: normal;
+    text-align: left;
+    font-size: 50px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(235, 210, 25);
+    margin: 50px;
+}
+
+/*MAIN CARTELERA*/
+
+.cartelera {
+    background-color: var(--myColorContenedor);
+}
+
+.contenedor-cartelera {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+    "film1 film2 film3"
+    "film4 film5 film6"
+    "film7 film8 film9"
+    ;
+    margin: 25px auto;    
+    width: 1500px;
+    height: auto;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.401);
+}
+
+.imgfilm {
+    float: left;
+    margin: 20px;
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
+
+.imgfilm:hover{
+    transform: scale(1.1);
+}
+
+.titulo-importante4 {
+    font-style: normal;
+    text-align: left;
+    font-weight: bold;
+    font-size: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(227, 10, 10);
+    margin: 10px;
+}
+
+/*MAIN PROXIMOS ESTRENOS*/
+
+.proximos-estrenos {
+    background-color: var(--myColorContenedor);
+}
+
+.contenedor-proximos-estrenos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "film1 film2 film3"
+    "film4 film5 film6"
+    ;
+    margin: 25px auto;    
+    width: 1500px;
+    height: auto;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.401);
+}
+
+/*MAIN COMBOS*/
+
+.combos {
+    background-color: var(--myColorContenedor);
+}
+
+.contenedor-combos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "film1 film2"
+    "film3 film4"
+    ;
+    margin: 25px auto;    
+    width: 1500px;
+    height: auto;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.401);
+}
+
+/*MAIN CONTACTO*/
+
+.titulo-importante5 {
+    font-style: normal;
+    text-align: left;
+    font-weight: bold;
+    font-size: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 10px;
+}
+
+form{
+    background-color:var(--myColorContenedor);
+    font-size: 30px;
+    display: flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    justify-content:baseline;
+    align-items:flex-start;
+    align-content:space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.obligatorio textarea {
+    background-color:lightpink;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.obligatorio input {
+    background-color:lightpink;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.obligatorio select {
+    background-color:lightpink;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.opcional input {
+    background-color: lightsalmon;
+    font-size: 20px;
+}
+
+/*FOOTER*/
+
+.pie {
+    padding-bottom: 20px;
+    background-image: var(--myGrad);
+    border-top: 10px solid rgb(11, 6, 6);
+}
+.sec{
+    height: 600px;
+    width: 100%;
+}
+
+.contacto{
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    color: blue;
+    /* font-size: 50px; */
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    align-content:space-between;
+}
+
+section a {
+    color: blue;
+    font-size: 35px;    
+    margin: 15px 15px;
+}
+
+section a:hover{
+    color:#333;
+    font-size: 40px;
+}
+
+
+/*PARA MOBILE*/
+
+@media (max-width: 767px){
+    .contenedor-cartelera{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas:
+        "film1 film2"
+        "film3 film4"
+        "film5 film6"
+        "film7 film8"
+        "film9"
+        ;
+    }
+}
+
+
+@media (max-width: 767px){
+    .contenedor-proximos-estrenos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+        "film1 film2"
+        "film3 film4"
+        "film5 film6"        
+        ;
+    }
+}
+
+
+@media (max-width: 767px){
+    .contenedor-combos{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+        "film1"
+        "film2"
+        "film3" 
+        "film4"       
+        ;
+    }
+}
